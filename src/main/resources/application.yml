@@ -4,6 +4,9 @@ server:
     context-path: /verification
 
 spring:
+  messages:
+    basename: config/i18n/messages
+    encoding: utf-8
   application:
     name: auth-verification
   thymeleaf:
@@ -17,7 +20,7 @@ spring:
     static-path-pattern: /static/**
     # 数据库配置
   datasource:
-    url: jdbc:mysql://10.0.0.110:3306/free_auth?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&useAffectedRows=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://wolas.cn:3306/free_auth?useUnicode=true&characterEncoding=utf8&allowMultiQueries=true&useSSL=false&useAffectedRows=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: mysql_TzYnEB
@@ -35,7 +38,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
   data:
     redis:
-      host: 10.0.0.110
+      host: wolas.cn
       port: 6379
       password: redis_ZRWDhE
       database: 1
